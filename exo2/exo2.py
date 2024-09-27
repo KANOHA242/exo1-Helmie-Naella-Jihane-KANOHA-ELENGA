@@ -1,30 +1,15 @@
-"""
-Complete the solution so that it returns true if the first argument(string)
-passed in ends with the 2nd argument (also a string).
+class solution:
+    
+    
+    def __init__(self, string):
+        self.string = string
 
-Examples:
+    def ends_with(self, ending):
+        return self.string.endswith(ending)
 
-    solution('abc', 'bc') # returns true
-    solution('abc', 'd') # returns false
-"""
 
-"""
-Create unit test using those cases:
-fixed_tests_True = (
-    ( "samurai", "ai"    ),
-    ( "ninja",   "ja"    ),
-    ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
-    ( "abcabc",  "bc"    ),
-    ( "fails",   "ails"  ),
-)
+s = solution('abc')
 
-fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
-)
-"""
+print(s.ends_with('bc'))  # returns True
+
+print(s.ends_with('d'))   # returns False
